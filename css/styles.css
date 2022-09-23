@@ -126,10 +126,16 @@ ul {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.site-nav .link:hover,
-.site-nav .link:focus,
 .contacts .link:hover,
 .contacts .link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contacts .link:hover svg use,
+.contacts .link:focus svg use {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -211,20 +217,8 @@ ul {
   width: 270px;
   height: 120px;
   background-color: var(--secondary-background-color);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-.features.attention-detail {
-  background-image: url(../images/antenna.svg);
-}
-.features.punctual {
-  background-image: url(../images/clock.svg);
-}
-.features.planning {
-  background-image: url(../images/diagram.svg);
-}
-.features.modern-tech {
-  background-image: url(../images/astronaut.svg);
+  justify-content: center;
+  align-items: center;
 }
 .advantages .title {
   margin-top: 30px;
@@ -260,15 +254,14 @@ ul {
   display: flex;
   gap: 30px;
 }
-/* .team-member {
-  padding-top: 30px;
-  padding-bottom: 30px;
-} */
+.team-member {
+  padding: 30px 32px;
+}
 .team-member > .name {
-  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-member > .specialisation {
-  margin-top: 10px;
+  margin-bottom: 16px;
 }
 .item-list {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -290,7 +283,7 @@ ul {
 }
 .social-icons {
   display: flex;
-  margin: 16px 32px 30px 32px;
+  gap: 10px;
 }
 .social-icons > .item {
   display: flex;
@@ -306,9 +299,6 @@ ul {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-}
-.social-icons .item {
-  margin-right: 10px;
 }
 .social-icons .item:last-child {
   margin-right: 0;
@@ -410,7 +400,15 @@ ul {
 .footer-icons .link:focus {
   background-color: var(--accent-color);
 }
-
+/* .contacts .link::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-color: red;
+  background-image: url(../images/envelope-hover.svg);
+  background-size: contain;
+} */
 /* portfolio.html page */
 
 /* Hero section */
